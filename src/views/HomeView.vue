@@ -1,9 +1,19 @@
 <template>
-  <div class="home"></div>
+  <div>
+    <BannerSecVue />
+    <ProductsSecVue />
+  </div>
 </template>
 
 <script>
+import BannerSecVue from "@/components/BannerSec.vue";
+import ProductsSecVue from "@/components/ProductsSec.vue";
+
 export default {
-  name: "HomeView",
+  name: "App",
+  components: {
+    BannerSecVue,
+    ProductsSecVue,
+  },
 };
 </script>

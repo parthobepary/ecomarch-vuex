@@ -1,4 +1,6 @@
-body {
+body,
+h1,
+p {
   margin: 0;
   padding: 0;
   border: 0;
@@ -26,10 +28,27 @@ body {
       color: white;
       font-size: 20px;
       text-decoration: none;
-      margin: 10px;
+      margin: 0 10px;
       background-color: cadetblue;
       padding: 5px 20px;
       border-radius: 10px;
+    }
+  }
+}
+.banner {
+  background-color: darkgray;
+  .banner-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px 15px;
+    img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+    p {
+      margin-top: 5px;
     }
   }
 }
