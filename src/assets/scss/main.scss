@@ -52,3 +52,22 @@ p {
     }
   }
 }
+.title {
+  margin: 100px 0 60px 0;
+}
+.body-container {
+  display: flex;
+  background-color: darkcyan;
+  .shorting {
+    width: 1000px;
+    background-color: gray;
+    .stiky {
+      position: sticky;
+      top: 0;
+      left: 0;
+      .shortestList {
+        padding: 20px 5px;
+      }
+    }
+  }
+}
