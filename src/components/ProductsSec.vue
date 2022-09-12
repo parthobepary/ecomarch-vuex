@@ -15,9 +15,7 @@
             <br />
             <button @click="showAll">Show all</button>
           </div>
-          <router-link class="itemcart" to="/cart"
-            >Cart - ({{ $store.state.carts.length }})</router-link
-          >
+          <h2 class="itemcart">Cart - ({{ $store.state.carts.length }})</h2>
         </div>
       </div>
       <div>
