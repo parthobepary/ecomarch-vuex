@@ -19,6 +19,31 @@ export default {
   props: {
     products: Array,
   },
+  data() {
+    return {
+      cartData: [],
+    };
+  },
+  methods: {
+    addToCars(item) {
+      let isExsit = this.cartData.find((el) => {
+        return el.title == item.title;
+      });
+      if (isExsit) {
+        isExsit.quantity += 1;
+        return;
+      } else {
+        let cartItem = {
+          title: item.title,
+          price: item.price,
+          quantity: 1,
+        };
+        this.cartData.push(cartItem);
+      }
+      this.$store.state.carts = this.cartData;
+      /* {{ $store.state.name }} */
+    },
+  },
 };
 </script>
 <style lang="scss">

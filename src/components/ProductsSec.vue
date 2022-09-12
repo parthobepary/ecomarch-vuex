@@ -15,6 +15,9 @@
             <br />
             <button @click="showAll">Show all</button>
           </div>
+          <router-link class="itemcart" to="/cart"
+            >Cart - ({{ $store.state.carts.length }})</router-link
+          >
         </div>
       </div>
       <div>
@@ -41,13 +44,11 @@ export default {
       const valus = this.produtc;
       const result = valus.filter((element) => element?.price <= value);
       this.shortedData = [...result];
-      console.log(this.shortedData);
     },
     shorrate(rating) {
       const valus = this.produtc;
       const result = valus.filter((element) => element?.rating?.rate > rating);
       this.shortedData = [...result];
-      console.log(this.shortedData);
     },
     showAll() {
       this.shortedData = [...this.produtc];
