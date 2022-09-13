@@ -63,18 +63,23 @@ export default {
   },
   methods: {
     xbutton(id) {
-      this.$store.state.carts.splice(id, 1);
+      this.dataArray.splice(id, 1);
     },
-    invoice() {
+    /* invoice() {
       this.dataArray.map((d) => {
         this.perPrice = d.price * d.quantity;
         this.subTotalPrice = this.subTotalPrice + this.perPrice;
         this.total = (this.subTotalPrice + this.subTotalPrice * 0.2).toFixed(2);
       });
-    },
+    }, */
   },
   mounted() {
-    this.invoice();
+    this.dataArray.map((d) => {
+      this.perPrice = d.price * d.quantity;
+      this.subTotalPrice = this.subTotalPrice + this.perPrice;
+      this.total = (this.subTotalPrice + this.subTotalPrice * 0.2).toFixed(2);
+    });
+    // invoice()
   },
 };
 </script>
